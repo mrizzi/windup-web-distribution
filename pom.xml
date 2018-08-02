@@ -30,21 +30,29 @@
 
         <version.wildfly.maven.plugin>1.2.2.Final</version.wildfly.maven.plugin>
 
-        <windup.scm.connection>scm:git:https://github.com/windup/windup-web-distribution.git</windup.scm.connection>
-        <windup.developer.connection>scm:git:git@github.com:windup/windup-web-distribution.git</windup.developer.connection>
-        <windup.scm.url>http://github.com/windup/windup-web-distribution</windup.scm.url>
+        <windup.scm.connection>scm:git:https://github.com/mrizzi/windup-web-distribution.git</windup.scm.connection>
+        <windup.developer.connection>scm:git:git@github.com:mrizzi/windup-web-distribution.git</windup.developer.connection>
+        <windup.scm.url>http://github.com/mrizzi/windup-web-distribution</windup.scm.url>
 
         <keycloak.tool.path>${project.build.directory}/keycloak-tool/keycloak-tool.jar</keycloak.tool.path>
     </properties>
 
     <distributionManagement>
         <snapshotRepository>
+            <id>myoss</id>
+            <url>http://79.45.177.216:8007/repository/maven-snapshots/</url>
+<!--
             <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+-->
         </snapshotRepository>
         <repository>
+            <id>myoss</id>
+            <url>http://79.45.177.216:8007/repository/maven-releases/</url>
+<!--
             <id>ossrh</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+-->
         </repository>
     </distributionManagement>
 
